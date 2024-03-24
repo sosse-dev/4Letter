@@ -1,113 +1,294 @@
+import Boxes1 from "@/components/animation/Boxes1";
+import CurveAnimationContainer from "@/components/animation/CurveAnimationContainer";
+import Header from "@/components/animation/Header";
+import Navbar from "@/components/Navbar";
+import StaggerBoxes from "@/components/animation/StaggerBoxes";
+import StaggerBoxes2 from "@/components/animation/StaggerBoxes2";
+import SwiperLists from "@/components/animation/SwiperLists";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Navbar />
+      <div className="w-full h-screen min-h-[30rem] max-h-[80rem] flex flex-col items-center justify-center text-accent -space-y-2">
+        <Header />
+      </div>
+      <div className="w-full h-fit mx-auto max-w-[80rem] flex flex-col lg:flex-row space-y-4 lg:space-x-5 lg:space-y-0 px-2 py-1 overflow-x-hidden">
+        <Boxes1 />
+      </div>
+      <div className="w-full h-screen mx-auto min-h-[40rem] max-w-[80rem] lg:h-[40rem] flex flex-col lg:flex-row py-6 px-2">
+        <div className="lg:px-8">
+          <h1 className="text-8xl tracking-wider font-handwriting text-accent">
+            Bacgkround
+          </h1>
+          <p className="indent-8 mt-3">
+            Lo dolor sit amet consectetur adipisicing elit. Minima expedita,
+            quaerat animi dolorum repudiandae hic commodi labore odio illum
+            laborum. Non autem optio ipsam, repellat inventore commodi unde
+            omnis
+          </p>
+          <p className="indent-8 mt-3">
+            Lo dolor sit amet consectetur adipisicing elit. Minima expedita,
+            quaerat animi dolorum repudiandae hic commodi labore odio illum
+            laborum. Non autem optio ipsam, repellat inventore commodi unde
+            omnis
+          </p>
+          <button className="px-24 py-3 lg:text-sm tracking-tight border-4 rounded-md mt-4 hover:bg-accent hover:text-primary border-accent">
+            Button
+          </button>
+        </div>
+        <div className="relative w-full grow bg-secondary mt-3">
+          <Image
+            src="/editorial.jpg"
+            fill={true}
+            priority={true}
+            sizes="(min-width: 1280px) 541px, (min-width: 1040px) 374px, (min-width: 780px) 752px, (min-width: 680px) 624px, 94.44vw"
+            className="w-full h-full object-cover"
+            alt="experiment"
+          />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="w-full h-fit mx-auto lg:h-screen max-w-[80rem] max-h-[50rem] bg-secondary grid place-items-center overflow-hidden">
+        <div className="relative w-[95%] lg:w-[90%] lg:h-[85%] border-4 border-primary rounded-lg bg-primary overflow-hidden">
+          <SwiperLists />
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="relative w-full h-screen max-h-[60rem] flex flex-col overflow-hidden">
+        <StaggerBoxes />
       </div>
-    </main>
+      <div className="relative w-fit mx-auto h-fit grid-cols-4 place-items-center hidden lg:grid">
+        <StaggerBoxes2 />
+      </div>
+      <div className="relative w-full h-fit pt-36">
+        {/* <CurveAnimation /> */}
+        <CurveAnimationContainer></CurveAnimationContainer>
+      </div>
+      <section className="py-6 bg-zinc-800 text-white pb-24">
+        <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+          <div className="py-6 md:py-0 md:px-6">
+            <h1 className="text-6xl font-handwriting tracking-widest">
+              Get in touch
+            </h1>
+            <p className="pt-2 pb-4">
+              Fill in the form to start a conversation
+            </p>
+            <div className="space-y-4">
+              <p className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-2 sm:mr-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                <span>Fake address, 9999 City</span>
+              </p>
+              <p className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-2 sm:mr-6"
+                >
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                <span>123456789</span>
+              </p>
+              <p className="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 mr-2 sm:mr-6"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <span>contact@business.com</span>
+              </p>
+            </div>
+          </div>
+          <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+            <label className="block">
+              <span className="mb-1">Full name</span>
+              <input
+                type="text"
+                placeholder="Name"
+                className="py-4 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-400 bg-zinc-900 px-2"
+              />
+            </label>
+            <label className="block">
+              <span className="mb-1">Email address</span>
+              <input
+                type="email"
+                placeholder="xxxxx@xxxxx.xxxx"
+                className="py-4 block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-400 bg-zinc-900 px-2"
+              />
+            </label>
+            <label className="block">
+              <span className="mb-1">Message</span>
+              <textarea
+                rows={3}
+                className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-400 bg-zinc-900 px-2 py-2"
+              ></textarea>
+            </label>
+            <button
+              type="button"
+              className="self-center px-8 py-3 font-semibold text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-400 dark:text-gray-900"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+      <footer className="px-4 divide-y bg-zinc-800 dark:text-gray-100">
+        <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+          <div className="lg:w-1/3">
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="flex justify-center space-x-3 lg:justify-start"
+            >
+              <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
+                <Image
+                  src="/4Letter-logo.png"
+                  width={80}
+                  height={80}
+                  alt="4Letter-Logo"
+                  className="rounded-full"
+                />
+              </div>
+              <span className="self-center text-4xl font-handwriting lg:text-6xl">
+                4Letter
+              </span>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+            <div className="space-y-3">
+              <h3 className="tracking-wide uppercase dark:text-gray-50">
+                Product
+              </h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Integrations
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="tracking-wide uppercase dark:text-gray-50">
+                Company
+              </h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="uppercase dark:text-gray-50">Developers</h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Public API
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" href="#">
+                    Guides
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <div className="uppercase dark:text-gray-50">Social media</div>
+              <div className="flex justify-start space-x-3">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Facebook"
+                  className="flex items-center p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                    className="w-5 h-5 fill-current"
+                  >
+                    <path d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z"></path>
+                  </svg>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Twitter"
+                  className="flex items-center p-1"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 fill-current"
+                  >
+                    <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+                  </svg>
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Instagram"
+                  className="flex items-center p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    fill="currentColor"
+                    className="w-5 h-5 fill-current"
+                  >
+                    <path d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333zM26.464 7.459c0 1.063-0.865 1.921-1.923 1.921-1.063 0-1.921-0.859-1.921-1.921 0-1.057 0.864-1.917 1.921-1.917s1.923 0.86 1.923 1.917z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-6 text-sm text-center dark:text-gray-400">
+          © 2024 Ahmad Sosse. All rights reserved.
+        </div>
+      </footer>
+    </>
   );
 }

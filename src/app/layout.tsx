@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Just_Another_Hand, Raleway } from "next/font/google";
 import "./globals.css";
+import NavbarM from "@/components/animation/NavbarM";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const raleway = Raleway({ subsets: ["latin"], weight: "400" });
+const just_another_hand = Just_Another_Hand({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-just-another-hand",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="container::-webkit-scrollbar container mx-auto" lang="en">
+      <body
+        className={`${raleway.className} ${just_another_hand.variable} bg-primary`}
+      >
+        <NavbarM />
+        {children}
+      </body>
     </html>
   );
 }

@@ -8,11 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary": "#FFF2D8",
+        "secondary": "#EAD7BB",
+        "tertiary": "#BCA37F",
+        "accent": "#113946"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        "handwriting": "var(--font-just-another-hand)"
+      }
     },
   },
   plugins: [],
