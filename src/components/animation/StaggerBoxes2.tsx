@@ -43,7 +43,8 @@ function StaggerBoxes2() {
           fill={true}
           priority={true}
           className="w-full h-full object-cover"
-          alt="aesthetic-flower"
+          sizes="(min-width: 1280px) 912px, 720px"
+          alt="flower-with-pot"
         />
       </div>
       <motion.div

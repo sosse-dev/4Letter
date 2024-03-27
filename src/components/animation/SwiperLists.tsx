@@ -26,6 +26,7 @@ function SwiperLists() {
               fill={true}
               priority={true}
               className="object-cover"
+              sizes="(min-width: 1280px) 804px, (min-width: 1040px) 574px, (min-width: 780px) 722px, (min-width: 680px) 600px, 89.72vw"
               alt="purple-sky"
             />
           </div>

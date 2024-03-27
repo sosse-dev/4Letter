@@ -8,10 +8,10 @@ function Navbar() {
         <Link href="/">
           <div className="w-12 h-12 flex gap-x-1 items-center ml-2 mt-2">
             <Image
-              src="/4Letter-logo.png"
+              src="/4letterlogo.png"
               width={80}
               height={80}
-              alt="4Letter-Logo"
+              alt="4letterlogo"
               className="object-contain rounded-full border-2 border-secondary"
             />
             <h1 className="text-3xl font-handwriting">4Letter</h1>

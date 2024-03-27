@@ -45,10 +45,10 @@ function NavbarM() {
             <div className="flex gap-x-2 items-center">
               <div className="w-24 h-24 rounded-full bg-white mb-3 overflow-hidden">
                 <Image
-                  src="/4Letter-logo.png"
+                  src="/4letterlogo.png"
                   width={80}
                   height={80}
-                  alt="4Letter-Logo"
+                  alt="4letterlogo"
                   className="w-full h-full object-contain"
                 />
               </div>
